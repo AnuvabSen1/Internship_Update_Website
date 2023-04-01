@@ -9,6 +9,31 @@ if (localStorage.getItem("tasks")) {
 	renderTasks();
 }
 
+function createTaskElement(task) {
+  var li = document.createElement("li");
+  li.className = "task";
+
+  var taskText = document.createElement("span");
+  taskText.className = "task-text";
+  taskText.textContent = task.name;
+
+  var taskLink = document.createElement("a");
+  taskLink.setAttribute("href", task.link);
+  taskLink.setAttribute("target", "_blank");
+  taskLink.innerHTML = "&#128279;"; // link symbol
+
+  taskText.appendChild(taskLink);
+  li.appendChild(taskText);
+
+  var deleteButton = document.createElement("button");
+  deleteButton.className = "delete-task";
+  deleteButton.textContent = "X";
+  li.appendChild(deleteButton);
+
+  return li;
+}
+
+
 function renderTasks() {
 	for (var i = 0; i < tasks.length; i++) {
 		var li = document.createElement("li");
@@ -159,32 +184,39 @@ function editTask() {
 }
 
 function addLink() {
-	var li = this.parentNode;
-	var link = prompt("Please enter a URL:");
-	if (link !== null && link !== "") {
-		var taskText = li.querySelector(".task-text ");
-		var taskIndex = tasks.findIndex(function(task) {
-			return task.name === taskText.textContent;
-		});
-		tasks[taskIndex].link = link;
-		saveTasks();
+  var li = this.parentNode;
+  var link = prompt("Please enter a URL:");
+  if (link !== null && link !== "") {
+    var taskText = li.querySelector(".task-text");
+    var taskIndex = tasks.findIndex(function(task) {
+      return task.name === taskText.textContent;
+    });
+    tasks[taskIndex].link = link;
+    saveTasks();
 
-		var taskLink = document.createElement("a");
-		taskLink.setAttribute("href", link);
-		taskLink.setAttribute("target", "blank");
-		taskLink.innerHTML = "&#128279;"; // link symbol
-		taskText.appendChild(taskLink);
-	}
+    var taskLink = document.createElement("a");
+    taskLink.setAttribute("href", link);
+    taskLink.setAttribute("target", "blank");
+    taskLink.innerHTML = "<span style='text-decoration:none;'>&#128279;</span>"; // link symbol without underline
+    taskText.innerHTML = taskText.textContent.replace(/link/gi, "");
+    taskText.appendChild(taskLink);
+  }
 }
+
+
+
+
+
 
 function updateButtonSpacing(li) {
   const buttons = li.querySelectorAll("button");
   const numButtons = buttons.length;
   const buttonWidth = buttons[0].offsetWidth;
-  const totalWidth = buttonWidth * numButtons;
-  const spaceWidth = (li.offsetWidth - totalWidth) / (numButtons - 1);
+  const totalWidth = numButtons * buttonWidth;
+  const availableWidth = li.offsetWidth - taskList.offsetWidth;
+  const marginRight = (availableWidth - totalWidth) / (numButtons - 1);
 
   for (let i = 0; i < numButtons; i++) {
-    buttons[i].style.marginRight = `${spaceWidth}px`;
+    buttons[i].style.marginRight = `${marginRight}px`;
   }
 }
