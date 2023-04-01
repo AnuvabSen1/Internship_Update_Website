@@ -1,124 +1,194 @@
 body {
-	font-family: Arial, sans-serif;
-	background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
 }
 
-.wrapper {
-	max-width: 1000px;
-	margin: 0 auto;
-	background-color: #fff;
-	box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
-	padding: 20px;
-	border-radius: 5px;
-	margin-top: 30px;
+.wrapper
+{
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 30px;
 }
+
 
 header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 20px;
+  display: flex;
+  align-items: right;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 h1 {
-	font-size: 36px;
-	margin: 0;
+  font-size: 36px;
+  margin: 0;
 }
 
 input[type="text"] {
-	padding: 10px;
-	font-size: 18px;
-	border-radius: 5px;
-	border: none;
-	flex-grow: 1;
-	margin-right: 10px;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  border-style: groove;
+  flex-grow: 1;
+  margin-right: 18px;
+  margin-left: 20px;
+  font-weight: lighter;
 }
 
+
 button {
-	padding: 10px 20px;
-	font-size: 18px;
-	border-radius: 5px;
-	border: none;
-	background-color: #4CAF50;
-	color: #fff;
-	cursor: pointer;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 button:hover {
-	background-color: #3E8E41;
+  background-color: #3E8E41;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 3px rgba(76, 175, 80, 0.4);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  background-color: #388E3C;
+}
+
+
+
+
+
+
+
+.data-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  height: 100px;
+}
+
+.data-item button {
+  margin-top: 5px;
+}
+
+button:hover {
+  background-color: #3E8E41;
 }
 
 ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
+
+/* li {
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	position: relative;
+} */
+
 
 li {
-	padding: 10px;
-	font-size: 18px;
-	border-radius: 5px;
-	margin-bottom: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background-color: #f2f2f2;
-	box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
+
 li:hover {
-	box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+li .delete,
+li .edit,
+li .link {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 li .delete {
-	padding: 10px;
-	background-color: #f44336;
-	color: #fff;
-	border-radius: 5px;
-	cursor: pointer;
-	margin-right: 10px;
+  padding: 10px;
+  background-color: #f44336;
+  color: #fff;
+  right: 10px;
 }
 
 li .delete:hover {
-	background-color: #da190b;
+  background-color: #da190b;
+}
+
+li .edit {
+  padding: 10px;
+  background-color: #ffc107;
+  color: #fff;
+  right: 90px;
+}
+
+li .edit:hover {
+  background-color: #e0a800;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 li .link {
-	padding: 10px;
-	background-color: #2196F3;
-	color: #fff;
-	border-radius: 5px;
-	cursor: pointer;
+  padding: 10px;
+  background-color: #2196F3;
+  color: #fff;
+  right: 150px;
 }
 
 li .link:hover {
-	background-color: #0b7dda;
+  background-color: #0b7dda;
 }
 
 li button {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
+
 
 .task-buttons {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.task-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: left;
+  margin-top: 10px;
 }
 
 .task-buttons button {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-right: 0;
-}
-
-li .task-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-left
 }
