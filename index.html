@@ -1,20 +1,308 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Research Internships for B-tech students</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <title>Research Internship List</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" type="image/x-icon" href="C:\Users\a\Desktop\Research Internship\Internship_Connect_2023.png" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
-	<div class="wrapper">
-		<header>
-			<h1>INTERNSHIPS PLATFORM</h1>
-			<input type="text" id="taskInput" placeholder="General Search">
-			<button onclick="addTask()">Search</button>
-		</header>
-		<ul id="taskList">
-		</ul>
+  <div class="cont_principal">
+    <body>
+
+
+      <header class="header-fixed">
+
+	<div class="header-limiter">
+
+		<h1><a href="#">Intern<span>Connect</span></a></h1>
+
+		<nav>
+			<a href="#">HOME</a>
+			<a href="#">ABOUT</a>
+			<a href="#">FAQ</a>
+			<a href="#" class="selected">CONTACT</a>
+		</nav>
+
 	</div>
-	<script type="text/javascript" src="script.js"></script>
+
+</header>
+
+<div class = "main">
+  <div class="cont_centrar">
+    <div class="cont_todo_list_top">
+      <div class="cont_titulo_cont">
+        <h3>INTERNSHIP PLATFORM</h3>
+      </div>
+      <div class="cont_add_cont">
+        <a href="#e" onclick="add_new()">
+          <span class="material-symbols-outlined">legend_toggle</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="cont_crear_new">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Select</th>
+            <th>Country</th>
+            <th>Deadline</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <select name="" id="action_select">
+                <option value="INTERNATIONAL">INTERNATIONAL</option>
+                <option value="DOMESTIC">NATIONAL</option>
+                <option value="RESEARCH">RESEARCH</option>
+                <option value="SOFTWARE">SOFTWARE</option>
+              </select>
+            </td>
+            <td>
+              <input type="text" class="input_title_desc" />
+            </td>
+            <td>
+              <select name="" class="input_description_title" id="date_select">
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th class="titl_description">Description</th>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <input type="text" class="input_description" required />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <button class="btn_add_fin" onclick="add_to_list()">ADD</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="cont_princ_lists">
+    <ul>
+      <li class="list_international li_num_0_1">
+      <div class="col_md_1_list">
+        <p>INTERNATIONAL</p>
+        </div>
+    <div class="col_md_2_list">
+        <h4>MITACS GLOBALINK RESEARCH FELLOWSHIP</h4>
+    <p>CANADA</p>
+        </div>
+        <div class="col_md_3_list">
+    <div class="cont_text_date">
+    <p><a href="https://www.mitacs.ca/en/programs/globalink/globalink-research-internship" target="_blank"><span class="material-symbols-outlined">link</span></a></p>
+          </div>
+    <div class="cont_btns_options">
+      <ul>
+        <li><a href="https://www.mitacs.ca/en/programs/globalink/globalink-research-internship" target="_blank"><i class="material-icons">&#xe157;</i></a></li>
+      </ul>
+          </div>
+        </div>
+      </li>
+     </ul>
+  </div>
+
+
+  <div class="cont_princ_lists">
+      <ul>
+        <li class="list_international li_num_0_1">
+        <div class="col_md_1_list">
+          <p>INTERNATIONAL</p>
+          </div>
+      <div class="col_md_2_list">
+          <h4>DAAD WISE SCHOLARSHIP</h4>
+      <p>GERMANY</p>
+          </div>
+          <div class="col_md_3_list">
+      <div class="cont_text_date">
+      <p><a href="https://www.daad.de/en/study-and-research-in-germany/scholarships/"> <span class="material-symbols-outlined">link</span></a></p>
+            </div>
+      <div class="cont_btns_options">
+        <ul>
+          <li><a href="https://www.daad.de/en/study-and-research-in-germany/scholarships/"><i class="material-icons">&#xe157;</i></a></li>
+        </ul>
+            </div>
+          </div>
+        </li>
+       </ul>
+    </div>
+
+
+    <div class="cont_princ_lists">
+  <ul>
+    <li class="list_research li_num_0_1">
+    <div class="col_md_1_list">
+      <p>NATIONAL</p>
+      </div>
+  <div class="col_md_2_list">
+      <h4>SPARK, IIT ROORKEE</h4>
+  <p>INDIA</p>
+      </div>
+      <div class="col_md_3_list">
+  <div class="cont_text_date">
+  <p><a href="http://www.iasc.gov.in/internship.html" target="_blank"><span class="material-symbols-outlined">link</span></a></p>
+        </div>
+  <div class="cont_btns_options">
+    <ul>
+      <p><li><a href="http://www.iasc.gov.in/internship.html" target="_blank"><i class="material-icons">&#xe157;</i></a></li></p>
+    </ul>
+        </div>
+      </div>
+    </li>
+   </ul>
+</div>
+
+
+    <div class="cont_princ_lists">
+        <ul>
+          <li class="list_international li_num_0_1">
+          <div class="col_md_1_list">
+            <p>INTERNATIONAL</p>
+            </div>
+        <div class="col_md_2_list">
+            <h4>CHARPAK EXCHANGE PROGRAM</h4>
+        <p>FRANCE</p>
+            </div>
+            <div class="col_md_3_list">
+        <div class="cont_text_date">
+        <p><a href="https://www.inde.campusfrance.org/charpak-exchange-program" target="_blank"><span class="material-symbols-outlined">link</span></a></p>
+              </div>
+        <div class="cont_btns_options">
+          <ul>
+            <li><a href="https://www.inde.campusfrance.org/charpak-exchange-program" target="_blank"><i class="material-icons">&#xe157;</i></a></li>
+          </ul>
+              </div>
+            </div>
+          </li>
+         </ul>
+      </div>
+
+
+
+      <div class="cont_princ_lists">
+    <ul>
+      <li class="list_national li_num_0_1">
+      <div class="col_md_1_list">
+        <p>NATIONAL</p>
+        </div>
+    <div class="col_md_2_list">
+        <h4>INDIAN ACADEMY OF SCIENCES, IASC</h4>
+    <p>INDIA</p>
+        </div>
+        <div class="col_md_3_list">
+    <div class="cont_text_date">
+    <p><a href="http://www.iasc.gov.in/internship.html" target="_blank"><span class="material-symbols-outlined">link</span></a></p>
+          </div>
+    <div class="cont_btns_options">
+      <ul>
+        <li><a href="http://www.iasc.gov.in/internship.html" target="_blank"><i class="material-icons">&#xe157;</i></a></li>
+      </ul>
+          </div>
+        </div>
+      </li>
+     </ul>
+  </div>
+
+
+
+
+
+
+<!-- <div class="cont_princ_lists">
+<ul>
+  <li class="list_research li_num_0_3">
+    <div class="col_md_1_list">
+      <p>REGIONAL</p>
+    </div>
+    <div class="col_md_2_list">
+      <h4>INTERNATIONAL SUMMER SCHOOL ON COMPUTATIONAL BIOLOGY</h4>
+      <p>ITALY</p>
+    </div>
+    <div class="col_md_3_list">
+      <div class="cont_text_date">
+        <p><a href="https://www.cssb-scb.com/" target="_blank"><span class="material-symbols-outlined">link</span></a></p>
+      </div>
+      <div class="cont_btns_options">
+        <ul>
+          <p><li><a href="https://www.cssb-scb.com/" target="_blank"><i class="material-icons">&#xe157;</i></a></li></p>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>
+</div> -->
+
+
+
+<div class="cont_princ_lists">
+<ul>
+<li class="list_national li_num_0_2">
+<div class="col_md_1_list">
+  <p>INTERNATIONAL</p>
+  </div>
+<div class="col_md_2_list">
+  <h4>INTERNATIONAL SUMMER SCHOOL ON COMPUTATIONAL BIOLOGY</h4>
+<p>ITALY</p>
+  </div>
+  <div class="col_md_3_list">
+<div class="cont_text_date">
+<p><a href="https://www.cssb-scb.com/" target="_blank"><span class="material-symbols-outlined">link</span></a></p>
+    </div>
+<div class="cont_btns_options">
+<ul>
+  <li><a href="https://www.cssb-scb.com/" target="_blank"><i class="material-icons">&#xe157;</i></a></li>
+</ul>
+    </div>
+  </div>
+</li>
+</ul>
+</div>
+
+<!-- </div>
+</div>
+</div> -->
+
+
+<div>
+  <footer>
+    <a></a>
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+    <a href="#" class="fa fa-youtube"></a>
+    <a href="#" class="fa fa-instagram"></a>
+    <!-- <a> Copyright ©InternConnect. Made with Colorlib!</a> -->
+      <p>Copyright ©InternConnect. Made with Colorlib!</p>
+  </footer>
+</div>
+
+
+
+</div>
+</div>
+
+
+    <!--     End cont_central  -->
+
+
+  <script src="app.js"></script>
+
+
+<!-- /  <script src="footer.js"></script> -->
 </body>
 </html>
-
